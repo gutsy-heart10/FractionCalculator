@@ -10,6 +10,5 @@ int main() {
     fraction.calculateResult(resultNumerator, resultDenominator);
     system("cls");
     cout << "Result: " << resultNumerator << '/' <<resultDenominator << endl;
-    system("pause");
     return 0;
 }
