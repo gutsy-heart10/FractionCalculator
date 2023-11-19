@@ -20,17 +20,24 @@ void Fraction::returnResult(int& numerator, int& denominator) {
         numerator *= -1;
         denominator *= -1;
     }
-    int nod = 1;
-    for (int i = 2; i <= (numerator < denominator ? numerator : denominator); i++)
-    {
-        if (numerator % i == 0 && denominator % i == 0)
-        {
-            nod = i;
-        }
+
+    if (numerator == denominator) {
+        denominator = 1;
     }
-    numerator /= nod;
-    denominator /= nod;
+    else {
+        int nod = 1;
+        for (int i = 2; i <= (numerator < denominator ? numerator : denominator); i++)
+        {
+            if (numerator % i == 0 && denominator % i == 0)
+            {
+                nod = i;
+            }
+        }
+        numerator /= nod;
+        denominator /= nod;
+    }
 }
+
 void Fraction::addFraction(int& resultNumerator, int& resultDenominator) {
     resultNumerator = (numerator1 * denominator2) + (numerator2 * denominator1);
     resultDenominator = denominator1 * denominator2;
