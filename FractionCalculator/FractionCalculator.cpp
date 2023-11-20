@@ -9,6 +9,6 @@ int main() {
     int resultNumerator, resultDenominator;
     fraction.calculateResult(resultNumerator, resultDenominator);
     system("cls");
-    cout << "Result: " << resultNumerator << '/' <<resultDenominator << endl;
+    fraction.returnResult(resultNumerator, resultDenominator);
     return 0;
 }

@@ -15,28 +15,27 @@ void Fraction::inputFractions() {
 }
     
 void Fraction::returnResult(int& numerator, int& denominator) {
-    if (numerator < 0)
-    {
+    if (numerator < 0) {
         numerator *= -1;
         denominator *= -1;
     }
 
-    if (numerator == denominator) {
-        denominator = 1;
+    if (denominator == 1) {
+        cout << "Результат: " << numerator << endl;
     }
     else {
         int nod = 1;
-        for (int i = 2; i <= (numerator < denominator ? numerator : denominator); i++)
-        {
-            if (numerator % i == 0 && denominator % i == 0)
-            {
+        for (int i = 2; i <= (numerator < denominator ? numerator : denominator); i++) {
+            if (numerator % i == 0 && denominator % i == 0) {
                 nod = i;
             }
         }
         numerator /= nod;
         denominator /= nod;
+        cout << "Результат: " << numerator << '/' << denominator << endl;
     }
 }
+
 
 void Fraction::addFraction(int& resultNumerator, int& resultDenominator) {
     resultNumerator = (numerator1 * denominator2) + (numerator2 * denominator1);
