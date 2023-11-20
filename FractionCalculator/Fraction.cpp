@@ -21,7 +21,7 @@ void Fraction::returnResult(int& numerator, int& denominator) {
     }
 
     if (denominator == 1) {
-        cout << "Результат: " << numerator << endl;
+        cout << "Result: " << numerator << endl;
     }
     else {
         int nod = 1;
@@ -32,7 +32,7 @@ void Fraction::returnResult(int& numerator, int& denominator) {
         }
         numerator /= nod;
         denominator /= nod;
-        cout << "Результат: " << numerator << '/' << denominator << endl;
+        cout << "Result: " << numerator << '/' << denominator << endl;
     }
 }
 
